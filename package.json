@@ -1,0 +1,22 @@
+{
+  "name": "svg_logomaker",
+  "version": "1.0.0",
+  "description": "logo maker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChristianDBriones/svg_logomaker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChristianDBriones/svg_logomaker/issues"
+  },
+  "homepage": "https://github.com/ChristianDBriones/svg_logomaker#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
