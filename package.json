@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "logo maker",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +18,8 @@
   },
   "homepage": "https://github.com/ChristianDBriones/svg_logomaker#readme",
   "dependencies": {
+    "@inquirer/input": "^1.2.14",
+    "@inquirer/prompts": "^3.3.0",
     "inquirer": "^8.2.4"
   }
 }
