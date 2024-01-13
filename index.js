@@ -1,5 +1,40 @@
 //const input = require('@inquirer/prompts'); // CommonJS style import
 import { input } from '@inquirer/prompts';
+const {prompt} = require('inquirer');
+//text textColor shapeChoice shapeColor
+
+const questions = [
+  {
+    name:"text"
+    message: "What is your three letter choice?"
+  },
+
+  {
+    name:"textColor",
+    message: "what is the text color?"
+  },
+
+  {
+    type: "list",
+    name:"shapeChoice",
+    message: "what is the shape of choice?",
+    choices: ["circle", "square", "triangle"]
+  },
+
+  {
+    name:"shapeColor",
+    message: "what is the shape color?"
+  },
+
+]
+
+
+function init() {
+  prompt(questions)
+  .then()
+}
+
+init()
 
 // await is only valid in async functions and the top level bodies of modules
 (async function() {
@@ -24,7 +59,10 @@ import { input } from '@inquirer/prompts';
 
 // user selects text (up to 3 characters long)
 
-
+// async function washDish() {
+//   const clean = await clean()
+//   const dry = await dry()
+// }
 
 
 // .gitignore
