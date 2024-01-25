@@ -1,78 +1,31 @@
-//const input = require('@inquirer/prompts'); // CommonJS style import
-import { input } from '@inquirer/prompts';
-const {prompt} = require('inquirer');
-//text textColor shapeChoice shapeColor
+import { input, select } from "@inquirer/prompts";
 
-const questions = [
-  {
-    name:"text"
-    message: "What is your three letter choice?"
-  },
+// TODO: Include packages needed for this application
 
-  {
-    name:"textColor",
-    message: "what is the text color?"
-  },
+// TODO: Create an array of questions for user input
+const questions = [];
 
-  {
-    type: "list",
-    name:"shapeChoice",
-    message: "what is the shape of choice?",
-    choices: ["circle", "square", "triangle"]
-  },
+// TODO: Create a function to write README file
+function writeToFile(fileName, data) { }
 
-  {
-    name:"shapeColor",
-    message: "what is the shape color?"
-  },
+// TODO: Create a function to initialize app
+const logotext = await input({message: "what is the text of your logo?"});
+if(logotext.length > 3)
+  console.log('can not be greater than 3 characters');
 
-]
+const logoshape = await select({message: "what is the shape of your logo?", choices: [{
+  name: 'circle',
+  value: 'circle'
+},
+{
+  name: 'triangle',
+  value: 'triangle'
+},
+{
+  name: 'square',
+  value: 'square'
+},
+]});
 
-
-function init() {
-  prompt(questions)
-  .then()
-}
-
-init()
-
-// await is only valid in async functions and the top level bodies of modules
-(async function() {
-  // Ask the user to enter the text of their logo
-  // Read it into a variable
-  const logoName2 = await input({ message: 'Enter the text of your logo' });
-  console.log(logoName2);
-  
-  // Make sure it's only 3 characters long
-  if (logoName2.length > 3)
-    console.error('Haha!');
-    //throw "Must be 3 or less characters";
-
-    // Package for generating an image
-    
-  //const answer = await input({ message: 'Enter your name' });
-  //console.log('hello ' + answer);
-})();
-
-
-// IIFE (Immeditately invoked function expression)
-
-// user selects text (up to 3 characters long)
-
-// async function washDish() {
-//   const clean = await clean()
-//   const dry = await dry()
-// }
-
-
-// .gitignore
-
-// user selects colour
-// user selects shape
-
-
-/*
-import { input } from '@inquirer/prompts'; //ES6-style import
-
-const answer = await input({ message: 'Enter your name' });
-*/
+console.log(logotext);
+console.log(logoshape);
